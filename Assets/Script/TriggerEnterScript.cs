@@ -24,12 +24,14 @@ public class TriggerEnterScript : MonoBehaviour
     [SerializeField]
     private int LightCurrentIntensity;
 
+    private Light LLight;
+
     private void Start()
     {
-        Light.SetActive(true);
+        LLight = Light.GetComponent<Light>();
     }
 
-   private void Update()
+    private void Update()
     {
 
         // listens for whether to activate device
@@ -112,9 +114,9 @@ public class TriggerEnterScript : MonoBehaviour
         {
             Debug.Log("Tick");
             yield return new WaitForSeconds(1);
-            Light.GetComponent<Light>().intensity = LightCurrentIntensity;
+            LLight.intensity = LightCurrentIntensity;
             LightCurrentIntensity = LightCurrentIntensity - 1;
         }
-
+        ButtonActivated = false;
     }
 }
