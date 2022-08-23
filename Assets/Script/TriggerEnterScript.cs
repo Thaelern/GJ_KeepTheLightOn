@@ -112,7 +112,6 @@ public class TriggerEnterScript : MonoBehaviour
     {
         while (LightCurrentIntensity >= 0)
         {
-            Debug.Log("Tick");
             yield return new WaitForSeconds(1);
             LLight.intensity = LightCurrentIntensity;
             LightCurrentIntensity = LightCurrentIntensity - 1;
