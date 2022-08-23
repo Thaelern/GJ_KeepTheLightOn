@@ -5213,13 +5213,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330488683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.02, y: 1.32, z: -0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.3899999, y: -19.92, z: -5.72}
   m_LocalScale: {x: 16, y: 1, z: 16}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 454267618}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386330485
 GameObject:
@@ -6336,7 +6336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454267618}
   m_Layer: 0
-  m_Name: Lighthouse
+  m_Name: ===Lighthouse===
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6361,6 +6361,7 @@ Transform:
   - {fileID: 1674496820}
   - {fileID: 840117710}
   - {fileID: 1665343398}
+  - {fileID: 330488687}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16281,7 +16282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1095961293}
   - component: {fileID: 1095961292}
-  - component: {fileID: 1095961291}
   - component: {fileID: 1095961290}
   m_Layer: 0
   m_Name: Extra camera bc Unity says we need it
@@ -16323,14 +16323,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &1095961291
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1095961289}
-  m_Enabled: 1
 --- !u!20 &1095961292
 Camera:
   m_ObjectHideFlags: 0
