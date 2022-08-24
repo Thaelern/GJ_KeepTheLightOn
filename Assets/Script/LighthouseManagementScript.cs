@@ -23,6 +23,7 @@ public class LighthouseManagementScript : MonoBehaviour
     public void RefillPower()
     {
         currentPowerLevels = MaxPowerLevels;
+        StopAllCoroutines();
         StartCoroutine(LinearLowerPowerLevels());
         
     }
