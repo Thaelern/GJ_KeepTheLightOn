@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class FurnaceScript : MonoBehaviour
+public class GeneratorScript : MonoBehaviour
 {
 
     // variables
@@ -52,6 +52,7 @@ public class FurnaceScript : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F))
         {
+            Debug.Log("ENTER");
             RefillFurnace();
         }
     }
