@@ -5,6 +5,9 @@ using UnityEngine;
 public class FurnaceScript : MonoBehaviour
 {
 
+    public Animator generatorArrow;
+    public AudioSource furnaceAudio;
+
     // variables
     private bool isPlayerinrange;
 
@@ -63,6 +66,9 @@ public class FurnaceScript : MonoBehaviour
             Debug.Log("Furnace has been refilled");
             // this is super dirty and criminal. Refactor by casting to a permanent variable set at the start.
             LightHouseManagement.GetComponent<LighthouseManagementScript>().RefillPower();
+            generatorArrow.Play("arrow_sinking", 0, 0.0f);
+            furnaceAudio.Play();
+
         }
 
     }

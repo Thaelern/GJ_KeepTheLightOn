@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: meter_11 sec
+  m_Name: meter 180s
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -52,7 +52,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: arrow_sinking
-  m_Speed: 0.1
+  m_Speed: 0.008
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
