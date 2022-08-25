@@ -39,6 +39,7 @@ public class TriggerEnterScript : MonoBehaviour
 
         if (PlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
+            switchAnim.ResetTrigger("switch_off");
             switchAnim.SetTrigger("switch_on");
             ActivateDevice();
             LightCurrentIntensity = LightMaxIntensity;
@@ -61,7 +62,7 @@ public class TriggerEnterScript : MonoBehaviour
 
         if (LightCurrentIntensity == -1)
         {
-
+            switchAnim.SetTrigger("switch_off");
         }
 
     }

@@ -16403,7 +16403,7 @@ MonoBehaviour:
   ObjectToManipulate: {fileID: 4921956116634111969}
   Light: {fileID: 1076575346}
   rotationSpeed: 30
-  LightMaxIntensity: 50
+  LightMaxIntensity: 10
   LightCurrentIntensity: 0
 --- !u!65 &732148714
 BoxCollider:
@@ -25200,6 +25200,11 @@ PrefabInstance:
     - target: {fileID: -81612823746571547, guid: 7070357f75dd0ed4ca24abce4ec707f0,
         type: 3}
       propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -81612823746571547, guid: 7070357f75dd0ed4ca24abce4ec707f0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -81612823746571547, guid: 7070357f75dd0ed4ca24abce4ec707f0,
