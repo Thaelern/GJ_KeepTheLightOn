@@ -6,6 +6,8 @@ using UnityEngine;
 public class GeneratorScript : MonoBehaviour
 {
 
+    public Animator generatorArrow;
+
     // variables
     private bool isPlayerinrange;
 
@@ -61,9 +63,10 @@ public class GeneratorScript : MonoBehaviour
     {
         if (isPlayerinrange)
         {
-            Debug.Log("Furnace has been refilled");
+            Debug.Log("Generator has been refilled");
             // this is super dirty and criminal. Refactor by casting to a permanent variable set at the start.
             LightHouseManagement.GetComponent<LighthouseManagementScript>().RefillPower();
+            generatorArrow.Play("arrow_sinking", 0, 0.0f);
         }
         
     }
