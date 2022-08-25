@@ -5,7 +5,7 @@ using UnityEngine;
 public class TriggerEnterScript : MonoBehaviour
 {
     public Animator switchAnim;
-    bool lightOn;
+    public bool lightOn;
 
     [SerializeField]
     private bool ButtonActivated;
@@ -37,10 +37,11 @@ public class TriggerEnterScript : MonoBehaviour
 
         // listens for whether to activate device
 
-        if (PlayerInRange && Input.GetKeyDown(KeyCode.F))
+        if (!lightOn && PlayerInRange && Input.GetKeyDown(KeyCode.F))
         {
             switchAnim.ResetTrigger("switch_off");
             switchAnim.SetTrigger("switch_on");
+            lightOn = true;
             ActivateDevice();
             LightCurrentIntensity = LightMaxIntensity;
             StartCoroutine(ChangeLightIntensity());
@@ -60,9 +61,10 @@ public class TriggerEnterScript : MonoBehaviour
         }
 
 
-        if (LightCurrentIntensity == -1)
+        if (lightOn && LightCurrentIntensity == -1)
         {
             switchAnim.SetTrigger("switch_off");
+            lightOn = false;
         }
 
     }
