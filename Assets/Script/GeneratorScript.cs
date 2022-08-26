@@ -7,6 +7,7 @@ public class GeneratorScript : MonoBehaviour
 {
 
     public Animator generatorArrow;
+    public int generatorFilled;
 
     // variables
     private bool isPlayerinrange;
@@ -64,6 +65,7 @@ public class GeneratorScript : MonoBehaviour
         if (isPlayerinrange)
         {
             Debug.Log("Generator has been refilled");
+            generatorFilled++;
             // this is super dirty and criminal. Refactor by casting to a permanent variable set at the start.
             LightHouseManagement.GetComponent<LighthouseManagementScript>().RefillPower();
             generatorArrow.Play("arrow_sinking", 0, 0.0f);
