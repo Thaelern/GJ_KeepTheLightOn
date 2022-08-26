@@ -7,6 +7,7 @@ public class FurnaceScript : MonoBehaviour
 
     public Animator generatorArrow;
     public AudioSource furnaceAudio;
+    public int furnaceRefilled;
 
     // variables
     private bool isPlayerinrange;
@@ -29,6 +30,7 @@ public class FurnaceScript : MonoBehaviour
     private void Start()
     {
         currentFuel = 180f;
+        furnaceRefilled = 0;
     }
 
 
@@ -64,6 +66,7 @@ public class FurnaceScript : MonoBehaviour
         if (isPlayerinrange)
         {
             Debug.Log("Furnace has been refilled");
+            furnaceRefilled++;
             // this is super dirty and criminal. Refactor by casting to a permanent variable set at the start.
             LightHouseManagement.GetComponent<LighthouseManagementScript>().RefillPower();
             generatorArrow.Play("arrow_sinking", 0, 0.0f);
